@@ -1,4 +1,4 @@
-﻿use master;
+﻿﻿use master;
 go
 drop database if exists audio_library;
 go
@@ -19,6 +19,7 @@ favorite_genre int not null
 
 create table genre(
 id int not null primary key identity(1,1),
+name_of_genre varchar(40) not null
 );
 
 
