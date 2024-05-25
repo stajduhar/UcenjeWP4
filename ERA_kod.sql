@@ -50,8 +50,8 @@ alter table author add foreign key (book_genre) references genre(id);
 alter table book add foreign key (author_of_the_book) references author(id);
 
 
-INSERT INTO genre (name_of_genre)
-VALUES 
+insert into genre (name_of_genre)
+values 
 ('Triler'),
 ('Mit'),
 ('Realizam');
