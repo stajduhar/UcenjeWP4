@@ -1,4 +1,4 @@
-﻿﻿use master;
+﻿use master;
 go
 drop database if exists audio_library;
 go
@@ -48,3 +48,31 @@ alter table book add foreign key (book_genre) references genre(id);
 alter table author add foreign key (book_genre) references genre(id);
 
 alter table book add foreign key (author_of_the_book) references author(id);
+
+
+INSERT INTO genre (name_of_genre)
+VALUES 
+('Triler'),
+('Mit'),
+('Realizam');
+
+
+insert into audio_library_account (username,first_name,last_name,date_of_birth,email_account,favorite_genre) 
+values
+('iivic123','Ivan','Ivić','1998-05-15','ivanivic98@gmail.com',3),
+('pperic971','Pero','perić','1993-02-28','peroperic@gmail.com',2),
+('bboris152','Boris','Bukvić','1991-01-13','borisbukvic1991@gmail.com',1);
+
+
+insert into author (date_of_birth,book_genre,first_name,last_name,nationality)
+values
+('1963-06-21','1','Gosho','Aoyama','Japan'),
+('1940-05-13','2','Charles Bruce','Chatwin','Engleska'),
+('1860-01-29','3','Anton','Chekhov','Rusija');
+
+
+insert into book (the_title_of_the_book,author_of_the_book,book_genre)
+values
+('Detektiv Conan','1','1'),
+('U Patagoniji','2','2'),
+('Galeb','3','3');
