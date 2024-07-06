@@ -1,8 +1,11 @@
 ﻿using UcenjeCS;
 using UcenjeCS.E13KlasaObjekt;
 
-new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 
+new UcenjeCS.E17Subota.raspored();
+
+//new UcenjeCS.E17Subota.Program();
+//new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 //new UcenjeCS.E15RadSStringovima.Program();
 //new UcenjeCS.E14Nasljedivanje.Program(); // new označava pozivam construtor
 //UcenjeCS.E13KlasaObjekt.Program.Izvedi();
