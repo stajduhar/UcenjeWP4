@@ -2,8 +2,9 @@
 using UcenjeCS.E13KlasaObjekt;
 
 
-new UcenjeCS.E17Subota.raspored();
+new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
 
+//new UcenjeCS.E17Subota.raspored();
 //new UcenjeCS.E17Subota.Program();
 //new UcenjeCS.E16GenericiLambdaEkstenzije.Program();
 //new UcenjeCS.E15RadSStringovima.Program();
