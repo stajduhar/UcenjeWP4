@@ -13,5 +13,10 @@ namespace UcenjeCS.E18KonzolnaAplikacija.Model
         public string? OIB { get; set; }
         public string? Email { get; set; }
 
+        public int CompareTo(Polaznik? other)
+        {
+            return Prezime.CompareTo(other.Prezime);
+        }
+
     }
 }
