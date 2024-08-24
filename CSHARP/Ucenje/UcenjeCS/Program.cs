@@ -2,7 +2,10 @@
 using UcenjeCS.E13KlasaObjekt;
 
 
-new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
+
+UcenjeCS.CiklicniKaluklatorZadatak.CiklicniKaluklator.Izvedi();
+
+//new UcenjeCS.E18KonzolnaAplikacija.Izbornik();
 
 //new UcenjeCS.E17Subota.raspored();
 //new UcenjeCS.E17Subota.Program();
