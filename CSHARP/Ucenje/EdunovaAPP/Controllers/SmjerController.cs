@@ -27,7 +27,15 @@ namespace EdunovaAPP.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.Smjerovi);
+            try
+            {
+                return Ok(_context.Smjerovi);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
 
         [HttpGet]

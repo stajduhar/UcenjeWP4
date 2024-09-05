@@ -12,7 +12,6 @@ builder.Services.AddSwaggerGen();
 
 
 // dodavanje baze podataka
-
 builder.Services.AddDbContext<EdunovaContext>(
     opcije =>
     {
@@ -21,20 +20,28 @@ builder.Services.AddDbContext<EdunovaContext>(
     );
 
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+app.UseSwagger();
+app.UseSwaggerUI(opcije => {
+    opcije.ConfigObject.AdditionalItems.Add("requestSnippetsEnabled", true);
+    opcije.EnableTryItOutByDefault();
+});
+//}
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+// za potrebe produkcije
+app.UseStaticFiles();
+app.UseDefaultFiles();
+app.MapFallbackToFile("index.html");
+// zavr?io za potrebe produkcije
 
 app.Run();

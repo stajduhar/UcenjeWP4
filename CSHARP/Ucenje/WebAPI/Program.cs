@@ -23,11 +23,11 @@ builder.Services.AddDbContext<EdunovaContext>(
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 
@@ -35,4 +35,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+
+// za potrebe produkcije
+
+app.UseStaticFiles();
+app.UseDefaultFiles();
+app.MapFallbackToFile("intex.html");
+
+// završio za potrebe produkcije
 app.Run();
