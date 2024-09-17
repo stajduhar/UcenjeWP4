@@ -6,20 +6,19 @@ import { RoutesNames } from '../constants';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function NavbarEdunova(){
+export default function NavBarEdunova(){
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return(
-
-<Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home">Edunova APP</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={()=>navigate(RoutesNames.HOME)}>Početna</Nav.Link>
-            <Nav.Link href="https://stajduhar-001-site1.etempurl.com/swagger/index.html" target='_blank'>Swagger</Nav.Link>
+            <Nav.Link href="https://tjakopec-001-site1.ftempurl.com/swagger/index.html" target='_blank'>Swagger</Nav.Link>
             <NavDropdown title="Programi" id="basic-nav-dropdown">
               <NavDropdown.Item onClick={()=>navigate(RoutesNames.SMJER_PREGLED)}>Smjerovi</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
